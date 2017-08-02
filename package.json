@@ -21,6 +21,10 @@
   "main": "keystone.js",
   "engines": {
     "node": ">=4",
-    "npm": ">=2"
+    "npm": ">=2",
+    "yarn": ">=0.27"
+  },
+  "devDependencies": {
+    "pug-lint": "^2.4.0"
   }
 }
