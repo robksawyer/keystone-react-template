@@ -1,3 +1,14 @@
+// Simulate config options from your production environment by
+// customising the .env file in your project's root folder.
+require('dotenv').config();
+
+// Initialise New Relic if an app name and license key exists
+if (process.env.NODE_ENV === 'production'){
+	if(process.env.NEW_RELIC_APP_NAME && process.env.NEW_RELIC_LICENSE_KEY) {
+		require('newrelic');
+	}
+}
+
 var keystone = require('keystone');
 
 keystone.init({
