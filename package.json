@@ -11,6 +11,7 @@
     "keystone": "^4.0.0-beta.5",
     "model-transform": "^1.1.0",
     "mongoose": "~4.4",
+    "newrelic": "^2.0.2",
     "pug": "^2.0.0-rc.3",
     "react": "^0.13.3",
     "request": "^2.60.0",
