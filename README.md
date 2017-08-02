@@ -18,9 +18,10 @@
 1. `heroku create my-cool-app`
 1. `yarn install`
 1. `git push heroku`
-1. Add COOKIE_SECRET as an environment variable in Heroku app instance settings.
-1. Add NEW_RELIC_APP_NAME as an environment variable in Heroku app instance settings.
-1. Add NODE_ENV as an environment variable and use the value `production`.
+1. Copy `MONGODB_URI` value and paste into new variable named `MONGO_URI`.
+1. Add `COOKIE_SECRET` as an environment variable in Heroku app instance settings.
+1. Add `NEW_RELIC_APP_NAME` as an environment variable in Heroku app instance settings.
+1. Add `NODE_ENV` as an environment variable and use the value `production`.
 1. Check it out!
 
 # Heroku Configuration
