@@ -1,17 +1,14 @@
 // libs
-import React, {Component} from 'react';
-import { Route } from 'react-router-dom';
+import React, { Component } from 'react';
+import { Route, Link } from 'react-router-dom';
 
 // components
-import Home from './components/Home';
-import User from './components/User';
 
 // styles
 import './common/styles/global'
 import {
-  Button, Container, Divider, Grid, Header, Icon, Image, Item, List, Label, Menu, Segment, Step, Table, Visibility
+  Button, Container, Divider, Grid, Header, FixedMenu, Icon, Image, Item, List, Label, Menu, Segment, Step, Table, Visibility
 } from 'semantic-ui-react';
-
 
 const style = {
   h1: {
@@ -31,35 +28,27 @@ const style = {
 
 export default class App extends Component {
 
-	state = {}
+	hideFixedMenu = () => this.setState({ visible: false })
+	showFixedMenu = () => this.setState({ visible: true })
 
-  hideFixedMenu = () => this.setState({ visible: false })
-  showFixedMenu = () => this.setState({ visible: true })
+	render() {
 
-	render () {
+		this.state = {};
 
-		const { visible } = this.state
+		const { visible } = this.state;
 
 		return (
 			<div>
         { visible ? <FixedMenu /> : null }
-        <Visibility
-          onBottomPassed={this.showFixedMenu}
-          onBottomVisible={this.hideFixedMenu}
-          once={false}
-        >
-          <Segment
-            inverted
-            textAlign='center'
-            style={{ minHeight: 700, padding: '1em 0em' }}
-            vertical
-          >
+        <Visibility onBottomPassed={this.showFixedMenu} onBottomVisible={this.hideFixedMenu} once={false}>
+          <Segment inverted textAlign='center' style={{ minHeight: 700, padding: '1em 0em' }} vertical>
             <Container>
               <Menu inverted pointing secondary size='large'>
                 <Menu.Item as='a' active>Home</Menu.Item>
                 <Menu.Item as='a'>Work</Menu.Item>
                 <Menu.Item as='a'>Company</Menu.Item>
                 <Menu.Item as='a'>Careers</Menu.Item>
+                <Link to='/users' className="item">Users</Link>
                 <Menu.Item position='right'>
                   <Button as='a' inverted>Log in</Button>
                   <Button as='a' inverted style={{ marginLeft: '0.5em' }}>Sign Up</Button>
@@ -70,13 +59,13 @@ export default class App extends Component {
             <Container text>
               <Header
                 as='h1'
-                content='Imagine-a-Company'
+                content='Keystone React Template'
                 inverted
                 style={{ fontSize: '4em', fontWeight: 'normal', marginBottom: 0, marginTop: '3em' }}
               />
               <Header
                 as='h2'
-                content='Do whatever you want when you want to.'
+                content='Change this content.'
                 inverted
                 style={{ fontSize: '1.7em', fontWeight: 'normal' }}
               />
@@ -87,7 +76,6 @@ export default class App extends Component {
             </Container>
           </Segment>
         </Visibility>
-
         <Segment style={{ padding: '8em 0em' }} vertical>
           <Grid container stackable verticalAlign='middle'>
             <Grid.Row>
@@ -103,12 +91,7 @@ export default class App extends Component {
                 </p>
               </Grid.Column>
               <Grid.Column floated='right' width={6}>
-                <Image
-                  bordered
-                  rounded
-                  size='large'
-                  src='/assets/images/wireframe/white-image.png'
-                />
+                <Image bordered rounded size='large' src='holder.js/400x400' />
               </Grid.Column>
             </Grid.Row>
             <Grid.Row>
@@ -128,7 +111,7 @@ export default class App extends Component {
               <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
                 <Header as='h3' style={{ fontSize: '2em' }}>"I shouldn't have gone with their competitor."</Header>
                 <p style={{ fontSize: '1.33em' }}>
-                  <Image avatar src='/assets/images/avatar/large/nan.jpg' />
+                  <Image avatar src='holder.js/100x100' />
                   <b>Nan</b> Chief Fun Officer Acme Toys
                 </p>
               </Grid.Column>
@@ -192,6 +175,6 @@ export default class App extends Component {
           </Container>
         </Segment>
       </div>
-		)
+		);
 	}
 }

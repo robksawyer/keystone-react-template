@@ -148,6 +148,10 @@ ansi-styles@^3.1.0:
   dependencies:
     color-convert "^1.9.0"
 
+ansi@~0.3.0:
+  version "0.3.1"
+  resolved "https://registry.yarnpkg.com/ansi/-/ansi-0.3.1.tgz#0c42d4fb17160d5a9af1e484bace1c66922c1b21"
+
 anymatch@^1.3.0:
   version "1.3.2"
   resolved "https://registry.yarnpkg.com/anymatch/-/anymatch-1.3.2.tgz#553dcb8f91e3c889845dfdba34c77721b90b9d7a"
@@ -1110,7 +1114,11 @@ bluebird@2.10.2:
   version "2.10.2"
   resolved "https://registry.yarnpkg.com/bluebird/-/bluebird-2.10.2.tgz#024a5517295308857f14f91f1106fc3b555f446b"
 
-bluebird@^3.0.6, bluebird@^3.4.1:
+bluebird@^2.9.9:
+  version "2.11.0"
+  resolved "https://registry.yarnpkg.com/bluebird/-/bluebird-2.11.0.tgz#534b9033c022c9579c56ba3b3e5a5caafbb650e1"
+
+bluebird@^3.0.6, bluebird@^3.4.1, bluebird@^3.5.0:
   version "3.5.0"
   resolved "https://registry.yarnpkg.com/bluebird/-/bluebird-3.5.0.tgz#791420d7f551eea2897453a8a77653f96606d67c"
 
@@ -2000,6 +2008,10 @@ deep-is@~0.1.3:
   version "0.1.3"
   resolved "https://registry.yarnpkg.com/deep-is/-/deep-is-0.1.3.tgz#b369d6fb5dbc13eecf524f91b070feedc357cf34"
 
+deepmerge@^0.2.7:
+  version "0.2.10"
+  resolved "https://registry.yarnpkg.com/deepmerge/-/deepmerge-0.2.10.tgz#8906bf9e525a4fbf1b203b2afcb4640249821219"
+
 defined@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/defined/-/defined-1.0.0.tgz#c98d9bcef75674188e110969151199e39b1fa693"
@@ -2241,6 +2253,10 @@ errorhandler@1.5.0:
   dependencies:
     accepts "~1.3.3"
     escape-html "~1.0.3"
+
+errors@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/errors/-/errors-0.2.0.tgz#0f51e889daa3e11b19e7186d11f104aa66eb2403"
 
 es6-promise@3.0.2:
   version "3.0.2"
@@ -3724,7 +3740,7 @@ lodash.sortby@^4.7.0:
   version "4.7.0"
   resolved "https://registry.yarnpkg.com/lodash.sortby/-/lodash.sortby-4.7.0.tgz#edd14c824e2cc9c1e0b0a1b42bb5210516a42438"
 
-lodash@3.10.x, lodash@^3.5.0, lodash@^3.9.3:
+lodash@3.10.x, lodash@^3.2.0, lodash@^3.5.0, lodash@^3.9.3:
   version "3.10.1"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-3.10.1.tgz#5bf45e8e49ba4189e17d482789dfd15bd140b7b6"
 
@@ -4130,6 +4146,10 @@ newrelic@^2.0.2:
   optionalDependencies:
     "@newrelic/native-metrics" "^2.1.0"
 
+node-constants@0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/node-constants/-/node-constants-0.0.2.tgz#db676f714082c1a233fe19f57c0243d0077c38bd"
+
 node-fetch@^1.0.1:
   version "1.7.1"
   resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-1.7.1.tgz#899cb3d0a3c92f952c47f1b876f4c8aeabd400d5"
@@ -4194,6 +4214,12 @@ npm-run-path@^2.0.0:
   resolved "https://registry.yarnpkg.com/npm-run-path/-/npm-run-path-2.0.2.tgz#35a9232dfa35d7067b4cb2ddf2357b1871536c5f"
   dependencies:
     path-key "^2.0.0"
+
+npmlog@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/npmlog/-/npmlog-0.1.1.tgz#8b9b9e4405d7ec48c31c2346965aadc7abaecaa5"
+  dependencies:
+    ansi "~0.3.0"
 
 npmlog@^4.0.2:
   version "4.1.2"
@@ -4451,6 +4477,14 @@ pbkdf2@^3.0.3:
     ripemd160 "^2.0.1"
     safe-buffer "^5.0.1"
     sha.js "^2.4.8"
+
+peerdep@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/peerdep/-/peerdep-0.1.0.tgz#c509ebc16018d894f4445bdd63b9a539eb898134"
+  dependencies:
+    npmlog "^0.1.1"
+    parents "^1.0.0"
+    semver "^3.0.1"
 
 pend@~1.2.0:
   version "1.2.0"
@@ -5329,6 +5363,10 @@ request@^2.45.0, request@^2.60.0, request@^2.72.0, request@^2.74.0, request@^2.7
     tunnel-agent "^0.6.0"
     uuid "^3.0.0"
 
+require-directory@^2.0.0:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/require-directory/-/require-directory-2.1.1.tgz#8c64ad5fd30dab1c976e2344ffe7f792a6a6df42"
+
 require-main-filename@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/require-main-filename/-/require-main-filename-1.0.1.tgz#97f717b69d48784f5f526a6c5aa8ffdda055a4d1"
@@ -5361,6 +5399,19 @@ resolve@^1.1.3, resolve@^1.1.4, resolve@^1.1.5, resolve@^1.1.6, resolve@^1.1.7:
 resolve@~0.6.1:
   version "0.6.3"
   resolved "https://registry.yarnpkg.com/resolve/-/resolve-0.6.3.tgz#dd957982e7e736debdf53b58a4dd91754575dd46"
+
+restful-keystone@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/restful-keystone/-/restful-keystone-0.3.0.tgz#b8252bc4e24720e4b232c381bbd467476540b72a"
+  dependencies:
+    bluebird "^2.9.9"
+    debug "^2.1.1"
+    deepmerge "^0.2.7"
+    errors "^0.2.0"
+    lodash "^3.2.0"
+    node-constants "0.0.2"
+    peerdep "^0.1.0"
+    require-directory "^2.0.0"
 
 right-align@^0.1.1:
   version "0.1.3"
@@ -5445,6 +5496,10 @@ semver-diff@^2.0.0:
 semver@5.3.0:
   version "5.3.0"
   resolved "https://registry.yarnpkg.com/semver/-/semver-5.3.0.tgz#9b2ce5d3de02d17c6012ad326aa6b4d0cf54f94f"
+
+semver@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/semver/-/semver-3.0.1.tgz#720ac012515a252f91fb0dd2e99a56a70d6cf078"
 
 send@0.14.1:
   version "0.14.1"

@@ -1,17 +1,8 @@
-import React, {Component, PropTypes} from 'react';
+import React from 'react';
 
 
-export default class Home extends Component {
+const Home = () => (
+  <section className="container home">Hello World</section>
+)
 
-  constructor() {
-    super()
-    this.state = { filter: '' }
-  }
-
-  render() {
-    return (
-      <section className="container home">Hello World</section>
-    );
-  }
-
-}
+export default Home
