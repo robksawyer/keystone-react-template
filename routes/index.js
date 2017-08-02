@@ -7,10 +7,15 @@ var importRoutes = keystone.importer(__dirname);
 // Setup Route Bindings
 exports = module.exports = function(app) {
 
-	app.use('/js', browserify('./client/scripts', {
-		transform: [babelify.configure({
-			plugins: ['object-assign']
-		})]
+	// This is where the magic happens.
+	// Browserify basically takes and compiles the content inside of the client folder.
+	app.use('/js', browserify('./client', {
+		transform: [
+			babelify.configure({
+				presets: ['es2015', 'react', 'stage-1'],
+				extensions: ['.js','.jsx']
+			})
+		]
 	}));
 
 	// Views

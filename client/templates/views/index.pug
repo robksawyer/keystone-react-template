@@ -12,9 +12,13 @@ html
 		//- Customise the stylesheet for your site by editing /public/styles/site.less
 		//- All .less files will be automatically compiled and minified in production.
 		link(href="/styles/site.min.css", rel="stylesheet")
+		link(href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.11/semantic.min.css", rel="stylesheet")
+		
+		//- See https://material-ui-1dab0.firebaseapp.com/style/typography#general
+		link(href="https://fonts.googleapis.com/css?family=Roboto:300,400,500", rel="stylesheet")
 
 	//- HTML BODY
 	body
 		#app
-		script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyCBroD1_P_WPvdhf3uyBxRzPiRbKvLiLBk')
-		script(src='/js/application.js')
+		//- script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyCBroD1_P_WPvdhf3uyBxRzPiRbKvLiLBk')
+		script(src='/js/index.js')

@@ -29,10 +29,10 @@ keystone.init({
 	'name': 'keystone-react-template',
 	'brand': 'Keystone React Template',
 
-	'less': 'public',
-	'static': 'public',
-	'favicon': 'public/favicon.ico',
-	'views': 'templates/views',
+	'less': 'client/public',
+	'static': 'client/public',
+	'favicon': 'client/public/favicon.ico',
+	'views': 'client/templates/views',
 	'view engine': 'pug',
 
 	// Handy options
