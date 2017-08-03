@@ -16,10 +16,9 @@ var pkg = require('./package.json');
 // Builds a database based on the name in package.json.
 // Warning: You shouldn't have any spaces or weird characters in the name.
 var mongoUrl = process.env.MONGO_URI;
-if(process.env.NODE_ENV === 'local') {
-	if(process.env.USE_LIVE_DB === 'true') {
-		mongoUrl = process.env.MONGO_URI;
-	} else {
+if(process.env.NODE_ENV === 'development') {
+	if(process.env.USE_LIVE_DB !== 'true') {
+		console.log("App is using the LOCAL Mongo database.");
 		mongoUrl = 'mongodb://localhost/' + pkg.name;
 	}
 }

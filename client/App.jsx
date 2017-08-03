@@ -4,6 +4,7 @@ import { Route, Link } from 'react-router-dom';
 
 // components
 import TopNav from './components/TopNav';
+import Hero from './components/Hero';
 
 // styles
 import './common/styles/global'
@@ -47,24 +48,7 @@ export default class App extends Component {
               <TopNav />
             </Container>
 
-            <Container text>
-              <Header
-                as='h1'
-                content='Keystone React Template'
-                inverted
-                style={{ fontSize: '4em', fontWeight: 'normal', marginBottom: 0, marginTop: '3em' }}
-              />
-              <Header
-                as='h2'
-                content='Change this content.'
-                inverted
-                style={{ fontSize: '1.7em', fontWeight: 'normal' }}
-              />
-              <Button primary size='huge'>
-                Get Started
-                <Icon name='right arrow' />
-              </Button>
-            </Container>
+            <Hero />
           </Segment>
         </Visibility>
         <Segment style={{ padding: '8em 0em' }} vertical>

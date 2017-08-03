@@ -51,10 +51,10 @@ exports = module.exports = function(app) {
 	// This is where the magic happens.
 	// Browserify basically takes and compiles the content inside of the client folder.
 	app.use('/js', browserify('./client', {
+		extensions: ['.js','.jsx'],
 		transform: [
 			babelify.configure({
-				presets: ['es2015', 'react', 'stage-1'],
-				extensions: ['.js','.jsx']
+				presets: ['es2015', 'react', 'stage-1']
 			})
 		]
 	}));
@@ -75,7 +75,7 @@ exports = module.exports = function(app) {
 
 	// Start the Restful API
 	restful.start();
-	
+
 	// Check to make sure an API call didn't happen
 	app.use(unless('/api'));
 

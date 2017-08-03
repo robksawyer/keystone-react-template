@@ -1,6 +1,8 @@
 import React, { PropTypes } from 'react';
 import styles from './{{name}}.css';
-
+import {
+  Container
+} from 'semantic-ui-react';
 
 export const {{name}} = (props) => {
   const {
@@ -18,17 +20,10 @@ export const {{name}} = (props) => {
   );
 }
 
-{{name}}.propTypes = {
-  tagName: PropTypes.string,
-  className: PropTypes.string,
-  variant: PropTypes.oneOf(['default'])
-};
-
 {{name}}.defaultProps = {
   tagName: 'div',
   className: '',
   variant: 'default'
 };
-
 
 export default {{name}};
