@@ -2,6 +2,9 @@
   "name": "keystone-react-template",
   "version": "0.0.0",
   "private": true,
+  "directories": {
+    "source": "./client/"
+  },
   "dependencies": {
     "axios": "^0.16.2",
     "babel": "^6.23.0",
@@ -36,7 +39,9 @@
     "underscore": "^1.8.3"
   },
   "scripts": {
-    "start": "node keystone.js"
+    "start": "node keystone.js",
+    "new-tag": "gulp scaffold:tag --name",
+    "new-component": "gulp scaffold:component --name"
   },
   "main": "keystone.js",
   "engines": {
@@ -48,10 +53,18 @@
     "bundle-collapser": "^1.2.1",
     "chai": "^4.1.0",
     "chai-enzyme": "^0.8.0",
+    "chalk": "^2.0.1",
+    "del": "^3.0.0",
+    "dopl": "^0.2.0",
     "envify": "^4.1.0",
+    "gulp": "^3.9.1",
     "jsdom": "^11.1.0",
+    "minimist": "^1.2.0",
+    "packpath": "^0.1.0",
+    "path": "^0.12.7",
     "pug-lint": "^2.4.0",
     "react-devtools": "^2.5.0",
+    "run-sequence": "^2.1.0",
     "sinon-chai": "^2.12.0",
     "uglify-js": "^3.0.27",
     "uglifyify": "^4.0.3"

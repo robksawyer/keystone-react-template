@@ -5,6 +5,8 @@ var keystone = require('keystone');
 var middleware = require('./middleware');
 var importRoutes = keystone.importer(__dirname);
 
+var cors = require('./helpers/cors');
+
 // Pass your keystone instance to the module
 var restful = require('restful-keystone')(keystone, {
 	root: '/api/' + process.env.API_VERSION
@@ -43,6 +45,9 @@ exports = module.exports = function(app) {
 		}
 	});
 
+	// Set the CORS so that same domain requests are allowed.
+	app.use(cors);
+
 	// This is where the magic happens.
 	// Browserify basically takes and compiles the content inside of the client folder.
 	app.use('/js', browserify('./client', {
@@ -54,20 +59,28 @@ exports = module.exports = function(app) {
 		]
 	}));
 
-	// Start the Restful API
-	restful.start();
-
 	// @see https://stackoverflow.com/questions/27117337/exclude-route-from-express-middleware
 	var unless = function(path, middleware) {
     return function(req, res, next) {
         if (path === req.path) {
             return next();
         } else {
-            return res.render('index');
+					if(middleware){
+						return middleware(req, res, next);
+					}
+          return next();
         }
     };
 	};
 
-	// Views
+	// Start the Restful API
+	restful.start();
+	
+	// Check to make sure an API call didn't happen
 	app.use(unless('/api'));
+
+	// Render templates/views/index.pug (React app)
+	app.use(function(req, res, next) {
+		return res.render('index');
+	});
 };

@@ -38,3 +38,9 @@ The following are a curated selection of Heroku add-ons that are critical to the
 	- App performance management.
 - Papertrail
 	- Helpful for logging and debugging. Without it, we'd have a hard time seeing errors.
+
+# Helpers
+
+## Create a new component
+
+Use the command `yarn new-component MyComponent` to create a new component.
